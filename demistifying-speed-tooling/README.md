@@ -48,6 +48,8 @@ FCP, FID, TTI + new metrics in development:
 
 ### Taxonomy of speed tooling
 
+Most based on the same few data sources or APIs.
+
 ![taxonomy of speed tooling](taxonomy.jpg)
 
 ### Curate organizational buy-in
