@@ -2,13 +2,14 @@
 
 https://www.youtube.com/watch?v=mLjxXPHuIJo
 
-## Foundations
+
+## Fundamentals
 
 ### 1. Benchmark with PageSpeed Insights
 
 * still the best starting point for everyone
 
-### 2. Iterate with Lighthouse via Devtools > Audits
+### 2. Iterate with Lighthouse via the Devtools/Audits panel
 
 * now with stack packs - tailored advice to your stack (e.g. Wordpress)
 
@@ -27,19 +28,76 @@ FCP, FID, TTI + new metrics in development:
 
 ![taxonomy of speed tooling](taxonomy.jpg)
 
-## Plumbing
+### Curate organizational buy-in
 
-### Budgets
+Make the business realize the conversion impact and how performance is a feature.
+
+## Professional techniques
+
+### 5. Explore field data from within the Search Console 
+
+### 6. Define a performance budget
+
+Now within Lighthouse:
 
 * Docs - https://developers.google.com/web/tools/lighthouse/audits/budgets
-
 * Budget calculator - https://perf-budget-calculator.firebaseapp.com/
 
-### Devtools > Performance
+### 7. Profile with Devtools/Performance panel
 
 * Devtools > Performance Docs - https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/
 
-### Custom metrics
+### 8. Implement production monitoring
 
-* Element timing - https://developers.chrome.com/origintrials/#/view_trial/3954160472831295489 (origin trial)
+Lab/synthetic checks on production
 
+* Calibre, Treo, Speedcurve
+* web.dev/measure
+* PSI API - https://developers.google.com/speed/docs/insights/v5/get-started
+
+### 9. Adopt a RUM solution
+
+Collect field data from your users
+
+* Firebase has this built-in
+
+### 10. Conduct competitive analytics with CrUX
+
+* build yourself using CrUX Cookbook: https://github.com/GoogleChrome/CrUX
+
+My 2c: you can also try Akamai's comparison tool built on CrUX data: https://developer.akamai.com/akamai-mpulse/crux-benchmarking
+
+## Robust regression defense
+
+### 11. Connect RUM metrics with business goals
+
+* choose representative pages and correlate over time
+
+### 12. Audit and improve use of 3rd party tags
+
+* requestmap.webperf.tools
+* patrickhulce/thirdparty-web
+
+My 2c: tracking network requests + size is cool but should also look at CPU time spent on Main Thread (see https://speedcurve.com/blog/third-party-blame-game/)
+
+### 13. Devise custom performance metrics
+
+* KPIs specific to your site
+* e.g. Element timing - https://developers.chrome.com/origintrials/#/view_trial/3954160472831295489 (origin trial)
+
+### 14. Create a Lighthouse plugin
+
+* Handbook: https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md
+
+My 2c: finally easily shareable as npm module (unlike the old custom audits)
+
+### 15. Implement performane measurement in CI
+
+* especially if for all PRs
+* LightHouse CI coming soon...
+
+My 2c: Do they mean https://github.com/GoogleChromeLabs/lighthousebot?
+
+## Summary
+
+![summary](summary.jpg)
