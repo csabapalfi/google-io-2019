@@ -1,4 +1,4 @@
-# Demystifying Speed Tooling (Google I/O ’19)
+# Demystifying Speed Tooling
 
 https://www.youtube.com/watch?v=mLjxXPHuIJo
 
