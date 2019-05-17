@@ -2,6 +2,28 @@
 
 https://www.youtube.com/watch?v=mLjxXPHuIJo
 
+- [Fundamentals](#fundamentals)
+  * [1. Benchmark with PageSpeed Insights](#1-benchmark-with-pagespeed-insights)
+  * [2. Iterate with Lighthouse via the Devtools/Audits panel](#2-iterate-with-lighthouse-via-the-devtoolsaudits-panel)
+  * [3. Track your field data with the CrUX Dashboard](#3-track-your-field-data-with-the-crux-dashboard)
+  * [4. Understand key speed metrics](#4-understand-key-speed-metrics)
+  * [Taxonomy of speed tooling](#taxonomy-of-speed-tooling)
+  * [Curate organizational buy-in](#curate-organizational-buy-in)
+- [Professional techniques](#professional-techniques)
+  * [5. Explore field data from within the Search Console](#5-explore-field-data-from-within-the-search-console)
+  * [6. Define a performance budget](#6-define-a-performance-budget)
+  * [7. Profile with Devtools/Performance panel](#7-profile-with-devtoolsperformance-panel)
+  * [8. Implement production monitoring](#8-implement-production-monitoring)
+  * [9. Adopt a RUM solution](#9-adopt-a-rum-solution)
+  * [10. Conduct competitive analytics with CrUX](#10-conduct-competitive-analytics-with-crux)
+- [Robust regression defense](#robust-regression-defense)
+  * [11. Connect RUM metrics with business goals](#11-connect-rum-metrics-with-business-goals)
+  * [12. Audit and improve use of 3rd party tags](#12-audit-and-improve-use-of-3rd-party-tags)
+  * [13. Devise custom performance metrics](#13-devise-custom-performance-metrics)
+  * [14. Create a Lighthouse plugin](#14-create-a-lighthouse-plugin)
+  * [15. Implement performane measurement in CI](#15-implement-performane-measurement-in-ci)
+- [Summary](#summary)
+
 
 ## Fundamentals
 
@@ -24,7 +46,7 @@ FCP, FID, TTI + new metrics in development:
 * layout stability: https://gist.github.com/skobes/2f296da1b0a88cc785a4bf10a42bca07 (origin trial, too)
 * largest contentful paint
 
-## Taxonomy of speed tooling
+### Taxonomy of speed tooling
 
 ![taxonomy of speed tooling](taxonomy.jpg)
 
