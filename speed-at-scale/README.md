@@ -2,6 +2,18 @@
 
 https://www.youtube.com/watch?v=YJGCZCaIZkQ
 
+### Interactivity impacts rage clicks
+
+Users expect the page to be interactive at around 1.3x the visual complete time (after visually complete).
+
+Otherwise the likelyhood or rage-clicking increases significantly.
+
+My 2c:
+* Here's the presentation about this from Akamai: [UX & Performance: Metrics that matter](https://speakerdeck.com/bluesmoon/ux-and-performance-metrics-that-matter-a062d37f-e6c7-4b8a-8399-472ec76bb75e?slide=16)
+* Should better define (not-)interactive, usually 2 causes:
+  1. JS not even loaded, event listener not added (typical with server-side rendering + hydrate)
+  2. event listener added but user input queued up behind long tasks on the main thread
+
 ## Performance Budgets
 
 Based on:
