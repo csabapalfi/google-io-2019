@@ -2,6 +2,29 @@
 
 https://www.youtube.com/watch?v=YJGCZCaIZkQ
 
+- [Intro](#intro)
+  * [Interactivity impacts rage clicks](#interactivity-impacts-rage-clicks)
+  * [Performance Budgets](#performance-budgets)
+  * [LightWallet](#lightwallet)
+  * [Perfomance Budget Calculator](#perfomance-budget-calculator)
+- [Images](#images)
+  * [Lazy loading](#lazy-loading)
+  * [Responsive images](#responsive-images)
+  * [Image CDNs](#image-cdns)
+- [JavaScript](#javascript)
+  * [Defer Third-party JS](#defer-third-party-js)
+  * [Remove costly libraries](#remove-costly-libraries)
+  * [Code spliting](#code-spliting)
+  * [PRPL Pattern](#prpl-pattern)
+- [Fonts](#fonts)
+- [CSS](#css)
+  * [Critical CSS](#critical-css)
+  * [ESI - Edge Side Inclusion](#esi---edge-side-inclusion)
+- [Compression](#compression)
+- [Adaptive Service](#adaptive-service)
+
+## Intro
+
 ### Interactivity impacts rage clicks
 
 Users expect the page to be interactive at around 1.3x the visual complete time (after visually complete).
@@ -14,16 +37,16 @@ My 2c:
   1. JS not even loaded, event listener not added (typical with server-side rendering + hydrate)
   2. event listener added but user input queued up behind long tasks on the main thread
 
-## Performance Budgets
+### Performance Budgets
 
 Based on:
-time: < 2 s TTI
-resourses: < 150Kb Js
-lighthouse: 90+ Perf score
+* time, e.g < 2 s TTI
+* resources, e.g < 150Kb JS
+* lighthouse, e.g >90 performance score
 
 ### LightWallet
 
-Performance budget tooling for lighthouse (or Command line version of lighthouse)
+Performance budgets in Lighthouse, CLI only for now:
 https://developers.google.com/web/tools/lighthouse/audits/budgets
 
 ### Perfomance Budget Calculator
@@ -31,9 +54,9 @@ https://developers.google.com/web/tools/lighthouse/audits/budgets
 https://perf-budget-calculator.firebaseapp.com/
 it can generate the budget.json for you, has a TTI range
 
-## Lazyload
+## Images
 
-### lazyload images
+### Lazy loading
 
 - Use an SVG placeholder with image dimensions to avoid reflow
 - google is levereging *Intersection Observer* for images
@@ -42,8 +65,6 @@ Netflix
 
 Lazyload on vertical scroll :)
 ![netflix-page-load](netflix-page-load.jpg)
-
-### Chrome 75 Lazyload Natively
 
 https://addyosmani.com/blog/lazy-loading/?q=io
 
@@ -57,17 +78,23 @@ chrome://flags/#enable-lazy-frame-loading
 
 Twitter limits pixel density on images to 2x (retina) - human eye cannot see more
 
-## Javascript
+### Image CDNs
 
-TOKOPEDIA 
-- serves a "lite" version of their app to new users
-- Lite Version uses Svelte: service workers precache their react app in the background (WOW)
 
-### 3rd Party
+## JavaScript
+
+
+### Defer Third-party JS
 
 57% of execution time in average
 
 - defer 3rd party js
+
+### Remove costly libraries
+
+TOKOPEDIA 
+- serves a "lite" version of their app to new users
+- Lite Version uses Svelte: service workers precache their react app in the background (WOW)
 
 ### Code spliting
 
@@ -86,7 +113,9 @@ Push minimal code to get interactive:
 
 font-display: swap
 
-## Critical CSS
+## CSS
+
+### Critical CSS
 
 - inline critical CSS: deliver document in <= 14Kb
 https://github.com/addyosmani/critical
