@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=mLjxXPHuIJo
   * [12. Audit and improve use of 3rd party tags](#12-audit-and-improve-use-of-3rd-party-tags)
   * [13. Devise custom performance metrics](#13-devise-custom-performance-metrics)
   * [14. Create a Lighthouse plugin](#14-create-a-lighthouse-plugin)
-  * [15. Implement performane measurement in CI](#15-implement-performane-measurement-in-ci)
+  * [15. Implement performance measurement in CI](#15-implement-performane-measurement-in-ci)
 - [Summary](#summary)
 
 
@@ -115,12 +115,12 @@ My 2c: tracking network requests + size is cool but should also look at CPU time
 
 My 2c: finally easily shareable as npm module (unlike the old custom audits)
 
-### 15. Implement performane measurement in CI
+### 15. Implement performance measurement in CI
 
 * especially if for all PRs
 * LightHouse CI coming soon...
 
-My 2c: Do they mean https://github.com/GoogleChromeLabs/lighthousebot?
+My 2c: Yep, finally found a repo: https://github.com/GoogleChrome/lighthouse-ci
 
 ## Summary
 
